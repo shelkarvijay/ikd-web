@@ -1,0 +1,48 @@
+<div class="slider-container" >
+    <!-- <mat-carousel timings="250ms ease-in" [autoplay]="true" [interval]="interval" color="accent" maxWidth="auto"
+    [proportion]="proportion" [slides]="noOfslides" [loop]="true" [hideArrows]="false" [hideIndicators]="false"
+    [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">
+    <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image"
+      overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
+  </mat-carousel> -->
+
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).webp" alt="Random first slide" width="100%"
+            height="500px">
+        </div>
+        <div class="carousel-caption">
+          <h3>10 seconds between slides...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[1]" alt="Random second slide" width="100%" height="500px">
+        </div>
+        <div class="carousel-caption">
+          <h3>No mouse events...</h3>
+          <p>This carousel doesn't pause or resume on mouse events</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[2]" alt="Random third slide" width="100%" height="500px">
+        </div>
+        <div class="carousel-caption">
+          <h3>No keyboard...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[3]" alt="Random fourth slide" width="100%" height="500px">
+        </div>
+        <div class="carousel-caption">
+          <h3>And no wrap after last slide.</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
